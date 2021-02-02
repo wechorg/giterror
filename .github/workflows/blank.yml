@@ -28,12 +28,14 @@ jobs:
         run: |
           ls
           git log --oneline
+      - name: log
+        run: git remote -v
 
-      # Runs a single command using the runners shell
-      - name: Base-Head diff
-        run: git diff --name-status origin/${{github.base_ref}}..origin/${{github.head_ref}}
+#       # Runs a single command using the runners shell
+#       - name: Base-Head diff
+#         run: git diff --name-status origin/${{github.base_ref}}..origin/${{github.head_ref}}
       
-      - name: Head-Base diff
-        run: git diff --name-status origin/${{github.head_ref}}..origin/${{github.base_ref}}
+#       - name: Head-Base diff
+#         run: git diff --name-status origin/${{github.head_ref}}..origin/${{github.base_ref}}
 
 
