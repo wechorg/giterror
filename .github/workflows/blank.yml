@@ -30,6 +30,13 @@ jobs:
           git log --oneline
       - name: log
         run: git remote -v
+        
+      - name: Base-Head diff
+        run: git diff origin/dev..origin/main
+      
+      - name: Head-Base diff
+        run: git diff origin/main..origin/dev
+
 
 #       # Runs a single command using the runners shell
 #       - name: Base-Head diff
