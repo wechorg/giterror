@@ -32,10 +32,10 @@ jobs:
         run: git remote -v
         
       - name: Base-Head diff
-        run: git diff origin/dev..origin/main
+        run: git diff 'origin/dev'..'origin/main'
       
       - name: Head-Base diff
-        run: git diff origin/main..origin/dev
+        run: git diff 'origin/main'..'origin/dev'
 
 
 #       # Runs a single command using the runners shell
