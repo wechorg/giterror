@@ -9,3 +9,7 @@ class Car {
     this.make = make;
   }
 }
+
+let car = new Car("Subaru", "Outback", "Subaru");
+
+console.log(car.make);
